@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container mt-5">
+    <h1>КАРТОЧКИ</h1>
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <h2>{{ el.steps }}</h2>
+        <p>{{ el.intro }}<p>
+        <p><b> Дата: {{ el.date.date() }} </b></p>
+        <a href="/posts/{{ el.id }}">Детальнее</a>
+        <br>
+        <a href="/total_sum">Сумматор</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

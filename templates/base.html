@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            background-color: #C3E5E5;
+        }
+        #main-text {
+            font-size: 24px;
+            text-align: justify;
+            padding: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <a class="p-2 text-dark" href="/posts">карточки</a>
+    <a class="p-2 text-dark" href="/create-article">создать</a>
+    <a class="p-2 text-dark" href="/total_sum">cумматор</a>
+</div>
+
+     {% block body %}{% endblock%}
+<div id="main-text">
+        <p>ШАГОМЕТР</p>
+        <p>Привет друг, я рад видеть тебя на этом сайте. Давай я кратко расскажу тебе что и как. Слева вверху
+        ты можешь видеть две подчёркнутые кнопки. Если ты кликнешь на создать, то ты попадешь на сраничку, где тебе нужно будет написать карточку о своей прогулке.
+        Ты увидишь подсказки в поле для текста, поэтому не бойся. Если же ты хочешь посмотреть все свои карточки, то нажми на кнопку карточки. Также ты можешь нажать на кнопку сумматор, где ты увидишь обшее количество шагов, которые ты прошел
+        Хорошей тебе прогулки (=^･ｪ･^=).</p>
+    </div>

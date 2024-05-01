@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про нас
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Шагометр</h1>
+    <form method="post">
+        <input type="text" name="steps" id="steps" class="form-control" placeholder="Введите общее количество шагов за текущий прогулочный сеанс"><br>
+        <textarea name="text" id="'text" class="form-control" placeholder="Здесь вы можете описать ваш прогулку"></textarea><br>
+        <input type = "submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+{% endblock %}
